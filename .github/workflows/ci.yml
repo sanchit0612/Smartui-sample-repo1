@@ -32,4 +32,6 @@ jobs:
     - name : run npm
       run:
         npm install @lambdatest/smartui-storybook -g
+    - name : step 1
+      run:
         smartui storybook ./storybook-static --config .smartui.json
