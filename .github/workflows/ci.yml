@@ -12,19 +12,19 @@ jobs:
     name: Execute Storybook build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v5
+    # - uses: actions/checkout@v5
 
-    - name: Find Last CommitId
-      run: |
-        API_HOST=https://api.github.com
-        # Check out the PR branch
-        git checkout $GITHUB_HEAD_REF
-        # Get the commit ID of the last commit
-        COMMIT_ID=$(git rev-parse HEAD)
-        echo "Last commit ID of PR: $COMMIT_ID"
-        GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
-        echo "GITHUB_URL: $GITHUB_URL"
-        echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
+    # - name: Find Last CommitId
+    #   run: |
+    #     API_HOST=https://api.github.com
+    #     # Check out the PR branch
+    #     git checkout $GITHUB_HEAD_REF
+    #     # Get the commit ID of the last commit
+    #     COMMIT_ID=$(git rev-parse HEAD)
+    #     echo "Last commit ID of PR: $COMMIT_ID"
+    #     GITHUB_URL=$API_HOST/repos/$GITHUB_REPOSITORY/statuses/$COMMIT_ID
+    #     echo "GITHUB_URL: $GITHUB_URL"
+    #     echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
    
     - name: Run the repo
       run: 
