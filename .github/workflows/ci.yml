@@ -2,7 +2,7 @@ name: Storybook PR Checks
 on:
   pull_request:
     branches:
-      - master
+      - main
 
 env:
   PROJECT_TOKEN: ${{ secrets.PROJECT_TOKEN }}
