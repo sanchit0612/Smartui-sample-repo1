@@ -12,7 +12,7 @@ jobs:
     name: Execute Storybook build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v5
 
     - name: Find Last CommitId
       run: |
@@ -26,16 +26,6 @@ jobs:
         echo "GITHUB_URL: $GITHUB_URL"
         echo "GITHUB_URL=$GITHUB_URL" >> $GITHUB_ENV
    
-    - name: Install Dependencies
-      run: |
-        npm install
-        npm install @lambdatest/smartui-storybook -g
-
-    - name: Create storybook static build
-      run: npm run build-storybook
-
-    - name: Execute storybook build
-      run: |
-        smartui --version
-        smartui config create .smartui.json
+    - name: Run the repo
+      run: 
         smartui storybook ./storybook-static --config .smartui.json
