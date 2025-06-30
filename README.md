@@ -1,4 +1,4 @@
-# SmartUI Storybook Sample (TypeScript)
+# SmartUI Story book Sample (TypeScript)
 
 This project demonstrates how to use LambdaTest Smart UI for visual regression te  sting with a React + Storybook project written in TypeScript. 
 
