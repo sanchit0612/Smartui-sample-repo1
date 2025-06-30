@@ -28,5 +28,6 @@ jobs:
    
     - name: Run the repo
       run: 
+        npm i
         npm install @lambdatest/smartui-storybook -g
         smartui storybook ./storybook-static --config .smartui.json
